@@ -3,14 +3,16 @@
 
 
 def get_medial_number():
-    """определяет среднее из трех чисел"""
+    """Определяет среднее из трех чисел"""
 
     n1 = int(input("n1: "))
     n2 = int(input("n2: "))
     n3 = int(input("n3: "))
 
+    # Среднее арифметическое трех чисел
     average = (n1 + n2 + n3)/3
 
+    # Число с минимальный отстоянием от среднего арифметического и будет искомым
     if abs(n1 - average) < abs(n2 - average):
         if abs(n1 - average) < abs(n3 - average):
             print(n1)
