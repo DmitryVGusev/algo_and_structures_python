@@ -29,7 +29,6 @@ if __name__ == '__main__':
     else:
         left_sum = get_sum
 
-
     n = 65
     if left_sum(n) == (n * (n + 1) / 2):
         print("Равенство выполняется")

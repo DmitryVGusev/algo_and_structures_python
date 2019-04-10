@@ -24,6 +24,6 @@ def reverse_num_recursive(num, rev=''):
 
 
 if __name__ == '__main__':
-    nubmer = int(input("Введите число: "))
-    print(reverse_num(nubmer))
-    print(reverse_num_recursive(nubmer))
+    number = int(input("Введите число: "))
+    print(reverse_num(number))
+    print(reverse_num_recursive(number))
