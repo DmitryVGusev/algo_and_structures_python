@@ -5,3 +5,27 @@
 число, чем то, что загадано. Если за 10 попыток число не отгадано,
 то вывести загаданное число.
 """
+from random import randint
+
+
+def guess_number(num):
+    attempts = 10
+    while attempts > 0:
+        ans = int(input("Ваше предположение? :"))
+
+        if ans < num:
+            print(f"Искомое число больше {ans}")
+        elif ans > num:
+            print(f"Искомое число меньше {ans}")
+        else:
+            print("Вы отгадали.")
+            return
+
+        attempts -= 1
+        print(f"Осталось попыток: {attempts}")
+
+    print(f"Вы не отгадали число {num}")
+
+
+if __name__ == '__main__':
+    guess_number(randint(0, 100))
