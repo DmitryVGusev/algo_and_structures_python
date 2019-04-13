@@ -24,10 +24,14 @@ def max_in_mass(mass: list):
 
 
 if __name__ == '__main__':
+    # Создаем подходящий массив
     m = [1, 2, 3, -3, 5, 6, 8, -1, 10, -2]  # [5, 6, 8, -1]
+
+    # Находим индексы минимального и максимального элементов
     ind_min = min_in_mass(m)
     ind_max = max_in_mass(m)
     if ind_min >= ind_max:
         print(0)
     else:
+        # Отображаем сумму по срезу
         print(sum(m[ind_min + 1:ind_max]))
