@@ -30,8 +30,10 @@ if __name__ == '__main__':
     # Находим индексы минимального и максимального элементов
     ind_min = min_in_mass(m)
     ind_max = max_in_mass(m)
-    if ind_min >= ind_max:
+    if ind_min = ind_max:
         print(0)
-    else:
+    elif ind_min > ind_max:
         # Отображаем сумму по срезу
+        print(sum(m[ind_max + 1:ind_min]))
+    else:
         print(sum(m[ind_min + 1:ind_max]))
