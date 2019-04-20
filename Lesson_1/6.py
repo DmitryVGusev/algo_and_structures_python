@@ -1,13 +1,11 @@
 # 6.	Пользователь вводит номер буквы в алфавите. Определить, какая это буква.
 
 
-def find_letter_position():
-    """Определяет положение буквы в алфафите"""
-    letter = input("Введите букву: ")
-    letter_pos = ord(letter) - ord('a') + 1
-
-    print(f"Буква '{letter}' находится в алфавите на {letter_pos} месте")
+def ident_letter_by_position():
+    """Определяет букву по положению в алфавите"""
+    position = int(input("Введите номер буквы: "))
+    print(f"Буква '{chr(96 + position)}' находится под номером {position}")
 
 
 if __name__ == '__main__':
-    find_letter_position()
+    ident_letter_by_position()
