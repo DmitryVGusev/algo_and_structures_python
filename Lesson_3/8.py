@@ -4,3 +4,27 @@
 записывать ее в последнюю ячейку строки.
 В конце следует вывести полученную матрицу.
 """
+
+"""Сделаем допущение, что на вход принимаются только целые числа"""
+
+
+def matrix_with_column_sum(x=5, y=4):
+    """Заполняет матрицу и  дополнительный вектор с суммами"""
+    matrix = []
+    for i in range(1, y+1):
+        line = []
+        for j in range(1, x):
+            # Матрица заполняется посимвольно
+            line.append(int(input(f"a({i},{j}): ")))
+
+        # Добавляем сумму элементов в конец строки
+        line.append(sum(line))
+        matrix.append(line)
+
+    # Вывод матрицы
+    for line in matrix:
+        print(("{:>3} " * 5).format(*line))
+
+
+if __name__ == '__main__':
+    matrix_with_column_sum()
