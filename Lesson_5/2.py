@@ -5,3 +5,29 @@
 [‘C’, ‘4’, ‘F’] соответственно. Сумма чисел из примера: [‘C’, ‘F’, ‘1’],
 произведение - [‘7’, ‘C’, ‘9’, ‘F’, ‘E’].
 """
+
+
+def hex_operations(num1, num2):
+    """
+    Производит сложение и умножения двух шестнадцатеричных чисел.
+    При этом каждое число представляется как массив, элементы которого это цифры
+    числа.
+    """
+
+    # lambda-функция переводит данные из типа список в тип int(16)
+    list_to_hex = lambda x: int(''.join(x), 16)
+
+    num1_int = list_to_hex(num1)
+    num2_int = list_to_hex(num2)
+
+    nums_sum = list(f"{num1_int + num2_int:X}")
+    nums_mult = list(f"{num1_int * num2_int:X}")
+
+    return nums_sum, nums_mult
+
+
+if __name__ == '__main__':
+    mass1 = ['A', '2']
+    mass2 = ['C', '4', 'F']
+    print(hex_operations(mass1, mass2))  # Выводит (['C', 'F', '1'], ['7', 'C', '9', 'F', 'E'])
+
