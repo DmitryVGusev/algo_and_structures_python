@@ -73,6 +73,8 @@ if __name__ == '__main__':
     28     13.8 MiB      0.0 MiB               prime_list.append(i)
     '''
 
+    # Выходит, наивный поиск эффективно использует память за счет использования генераторов
+
     eratosphen(5000)
     '''
     Line #    Mem usage    Increment   Line Contents
@@ -87,6 +89,8 @@ if __name__ == '__main__':
     37     16.0 MiB      0.0 MiB               ans[j] = 0
     38     16.0 MiB      0.0 MiB       return [x for x in ans if x][ind-1]
     '''
+
+    # Решето единожды генерирует массив натуральных чисел
 
 
 
